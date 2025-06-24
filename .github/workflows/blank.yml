@@ -13,6 +13,6 @@ jobs:
      
      - name: docker login
        run: |
-        echo "${{secrets.Docker_Username}}" | docker login -u "${{secrets.Docker_Password}}" --password-stdin
+        echo "${{secrets.DOCKER_USERNAME}}" | docker login -u "${{secrets.DOCKER_PASSWORD}}" --password-stdin
         docker image build -t deepik89/node-app:latest .
         docker push deepik89/node-app:latest

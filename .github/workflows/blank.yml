@@ -25,4 +25,4 @@ jobs:
        run: echo "${{secrets.Docker_Username}} | docker login -u ${{secrets.Docker_Password}}" 
 
      - name: docker build
-       run: docker build -t deepika/node-app:latest .
+       run: docker build -t deepika/node-app:latest ./Dockerfile

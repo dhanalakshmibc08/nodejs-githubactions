@@ -16,3 +16,4 @@ jobs:
         echo "${{secrets.DOCKER_PWD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
         docker image build -t deepik89/node-app:latest .
         docker push deepik89/node-app:latest
+

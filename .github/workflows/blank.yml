@@ -22,7 +22,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
      - name: docker login
-       run: echo "${{secrets.Docker_Username}} | docker login -u ${{secrets.Docker_Password}}" 
+       run: echo "${{secrets.Docker_Username}} | docker login -u ${{secrets.Docker_Password}}" --password-stdin
 
      - name: docker build
        run: docker image build -t deepik89/node-app:latest .
